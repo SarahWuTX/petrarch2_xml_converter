@@ -1,24 +1,19 @@
 from xml.dom.minidom import Document
-from stanfordcorenlp import StanfordCoreNLP
-import logging
 
 
 class PetrXmlConverter:
-    def __init__(self, input_path, corenlp_path, output_path='', port=None, memory='4g', lang='zh', timeout=1500,
-                 quiet=True, logging_level=logging.WARNING):
+    def __init__(self, input_path, output_path=''):
         self.input_path = input_path
         if output_path == '':
             self.output_path = 'output/' + input_path.split('/')[-1].split('.')[0] + '.xml'
         else:
             self.output_path = output_path
-        self.nlp = StanfordCoreNLP(corenlp_path, port, memory, lang, timeout, quiet, logging_level)
-        print('Start up StanfordCoreNLP...')
+        self.events = []
 
-    def __del__(self):
-        self.nlp.close()
-        print('Corenlp closed!')
-
-    def get_events(self):
+    def generate_events(self):
+        """
+        This method should be overridden depending on the input format of input files.
+        """
         with open(self.input_path, 'r') as source:
             for line in source.readlines():
                 attrs = line.split('\t')
@@ -33,18 +28,25 @@ class PetrXmlConverter:
                     'date': attrs[4].split(' ')[0].replace('-', ''),
                     'source': attrs[6],
                     'url': attrs[9],
-                    'content': content.split('\n')
+                    'content': content.split('\n'),
+                    'parse': []
                 }
-                yield event
+                for sent in event['content']:
+                    parse = self.parse(sent)
+                    event['parse'].append(parse)
+                self.events.append(event)
 
-    def run(self):
+    def parse(self, text):
+        return ''
+
+    def generate_xml(self):
         xml_doc = Document()
         # <Sentences> element
         xml_root = xml_doc.createElement('Sentences')
 
-        for event in self.get_events():
+        for event in self.events:
             # check keys
-            keys_check = [key in event.keys() for key in ['date', 'id', 'source', 'content']]
+            keys_check = [key in event.keys() for key in ['date', 'id', 'source', 'content', 'parse']]
             keys_check.sort()
             if not keys_check[0]:
                 print('\033[1;31m'+'Event without proper keys. Please check event format.\n{}'.format(event)+'\033[0m')
@@ -59,7 +61,7 @@ class PetrXmlConverter:
 
                 # <Parse> element
                 xml_parse = xml_doc.createElement("Parse")
-                parse_text = xml_doc.createTextNode('\n' + self.nlp.parse(event['content'][sent_i]) + '\n')
+                parse_text = xml_doc.createTextNode('\n' + event['parse'][sent_i] + '\n')
                 xml_parse.appendChild(parse_text)
 
                 # <Sentence> element
@@ -79,3 +81,6 @@ class PetrXmlConverter:
         with open(self.output_path, 'w+') as output_file:
             xml_doc.writexml(output_file, newl='\n', encoding='utf-8')
 
+    def run(self):
+        self.generate_events()
+        self.generate_xml()
