@@ -6,6 +6,7 @@ from PetrXmlConverter import PetrXmlConverter
 class FromWebConverter(PetrXmlConverter):
 
     def parse(self, text):
+        # Using this method, text can't be more than 70 words
         url = 'http://nlp.stanford.edu:8080/parser/index.jsp'
         data = {
             'query': text,
@@ -15,4 +16,5 @@ class FromWebConverter(PetrXmlConverter):
         doc = pq(response.content)
         parse = doc('#parse').text()
         return parse
+
 

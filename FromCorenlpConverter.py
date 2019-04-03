@@ -8,7 +8,7 @@ class FromCorenlpConverter(PetrXmlConverter):
                  quiet=True, logging_level=logging.WARNING):
         super().__init__(input_path, output_path)
         self.nlp = StanfordCoreNLP(corenlp_path, port, memory, lang, timeout, quiet, logging_level)
-        print('Start up StanfordCoreNLP...')
+        print('\033[1;32m'+'Start up StanfordCoreNLP...'+'\033[0m')
 
     def __del__(self):
         self.nlp.close()

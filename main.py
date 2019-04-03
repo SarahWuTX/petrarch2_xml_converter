@@ -17,7 +17,8 @@ def corenlp_test():
     input_path = 'input/news.txt'
     output_path = 'output/news.xml'
     corenlp_path = 'stanford-corenlp-full-2018-10-05'  # path of corenlp package
-    FromCorenlpConverter(input_path, corenlp_path, output_path).run()
+    port = 8000
+    FromCorenlpConverter(input_path, corenlp_path, output_path, port).run()
 
 
 def web_test():
