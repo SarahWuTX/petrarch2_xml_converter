@@ -18,7 +18,7 @@ class PetrXmlConverter:
     def __init__(self, input_path, output_path=''):
         self.input_path = input_path
         if output_path == '':
-            self.output_path = 'output/' + input_path.split('/')[-1].split('.')[0] + '.xml'
+            self.output_path = 'xml/' + input_path.split('/')[-1].split('.')[0] + '.xml'
         else:
             self.output_path = output_path
         self.events = []
@@ -75,7 +75,7 @@ class PetrXmlConverter:
                 print('\033[1;31m'+'Event without proper keys. Please check event format.\n{}'.format(event)+'\033[0m')
                 continue
 
-            for sent_i in range(len(event['content'])):
+            for sent_i in range(len(event[Attr.content])):
 
                 # <Text> element
                 xml_text = xml_doc.createElement('Text')
@@ -84,7 +84,7 @@ class PetrXmlConverter:
 
                 # <Parse> element
                 xml_parse = xml_doc.createElement("Parse")
-                parse_text = xml_doc.createTextNode('\n' + event[Attr.content][sent_i][Attr.text] + '\n')
+                parse_text = xml_doc.createTextNode('\n' + event[Attr.content][sent_i][Attr.parse] + '\n')
                 xml_parse.appendChild(parse_text)
 
                 # <Sentence> element

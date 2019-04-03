@@ -67,4 +67,17 @@ def net_connections(kind='inet'):
 ```
 sudo python main.py
 ```
-
+或者还有一个解决方法：修改 corenlp.py 文件
+把这段代码注释掉
+```python
+            # Check if the port is in use
+            if self.port in [conn.laddr[1] for conn in psutil.net_connections()]:
+                raise IOError('Port ' + str(self.port) + ' is already in use.')
+```
+变成
+```python
+            # Check if the port is in use
+            # if self.port in [conn.laddr[1] for conn in psutil.net_connections()]:
+            #    raise IOError('Port ' + str(self.port) + ' is already in use.')
+```
+**注意：修改后，启动 `StanfordCoreNLP Server` 一定要指定端口**
