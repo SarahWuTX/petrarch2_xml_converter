@@ -793,6 +793,16 @@
 (PU”))))))
 </Parse>
 </Sentence>
+<Sentence date="20180908" id="65567_25" sentence="True" source="NULL">
+<Text>
+（宣沂）
+</Text>
+<Parse>
+(PRN(PU（)
+(NP(NR宣沂))
+(PU）))
+</Parse>
+</Sentence>
 <Sentence date="20180912" id="65588_1" sentence="True" source="NULL">
 <Text>
 党的十九大以来，中拉关系有了新方向，实现了新突破
@@ -3782,13 +3792,21 @@
 </Sentence>
 <Sentence date="20180912" id="65646_46" sentence="True" source="NULL">
 <Text>
+同
+</Text>
+<Parse>
+(P同)
+</Parse>
+</Sentence>
+<Sentence date="20180912" id="65646_47" sentence="True" source="NULL">
+<Text>
 普京
 </Text>
 <Parse>
 (NR普京)
 </Parse>
 </Sentence>
-<Sentence date="20180912" id="65646_47" sentence="True" source="NULL">
+<Sentence date="20180912" id="65646_48" sentence="True" source="NULL">
 <Text>
 随后
 </Text>
@@ -3796,7 +3814,7 @@
 (AD随后)
 </Parse>
 </Sentence>
-<Sentence date="20180912" id="65646_48" sentence="True" source="NULL">
+<Sentence date="20180912" id="65646_49" sentence="True" source="NULL">
 <Text>
 观看了阿穆尔州经济发展和对华合作图片展以及黑龙江省和阿穆尔州传统手工艺展，听取了黑龙江省和阿穆尔州人文领域友好交流情况介绍
 </Text>
@@ -3838,7 +3856,7 @@
 (VP(VV介绍))))))
 </Parse>
 </Sentence>
-<Sentence date="20180912" id="65646_49" sentence="True" source="NULL">
+<Sentence date="20180912" id="65646_50" sentence="True" source="NULL">
 <Text>
 两国元首随后参观了鱼市和俄罗斯青年高技术展
 </Text>
@@ -3862,7 +3880,7 @@
 (NP(NN展))))))
 </Parse>
 </Sentence>
-<Sentence date="20180912" id="65646_50" sentence="True" source="NULL">
+<Sentence date="20180912" id="65646_51" sentence="True" source="NULL">
 <Text>
 两国元首兴致盎然，尝试制作当地特色食品，还与民众亲切互动
 </Text>
@@ -3896,7 +3914,7 @@
 (VP(VV互动)))))
 </Parse>
 </Sentence>
-<Sentence date="20180912" id="65646_51" sentence="True" source="NULL">
+<Sentence date="20180912" id="65646_52" sentence="True" source="NULL">
 <Text>
 丁薛祥
 </Text>
@@ -3904,7 +3922,7 @@
 (NR丁薛祥)
 </Parse>
 </Sentence>
-<Sentence date="20180912" id="65646_52" sentence="True" source="NULL">
+<Sentence date="20180912" id="65646_53" sentence="True" source="NULL">
 <Text>
 杨洁篪
 </Text>
@@ -3912,7 +3930,7 @@
 (NR杨洁篪)
 </Parse>
 </Sentence>
-<Sentence date="20180912" id="65646_53" sentence="True" source="NULL">
+<Sentence date="20180912" id="65646_54" sentence="True" source="NULL">
 <Text>
 王毅
 </Text>
@@ -3920,7 +3938,7 @@
 (NR王毅)
 </Parse>
 </Sentence>
-<Sentence date="20180912" id="65646_54" sentence="True" source="NULL">
+<Sentence date="20180912" id="65646_55" sentence="True" source="NULL">
 <Text>
 何立峰
 </Text>
@@ -3928,7 +3946,7 @@
 (NR何立峰)
 </Parse>
 </Sentence>
-<Sentence date="20180912" id="65646_55" sentence="True" source="NULL">
+<Sentence date="20180912" id="65646_56" sentence="True" source="NULL">
 <Text>
 等
 </Text>
@@ -3936,7 +3954,7 @@
 (ETC等)
 </Parse>
 </Sentence>
-<Sentence date="20180912" id="65646_56" sentence="True" source="NULL">
+<Sentence date="20180912" id="65646_57" sentence="True" source="NULL">
 <Text>
 参加上述活动
 </Text>
@@ -4078,13 +4096,21 @@
 </Sentence>
 <Sentence date="20180913" id="65671_12" sentence="True" source="NULL">
 <Text>
+以
+</Text>
+<Parse>
+(P以)
+</Parse>
+</Sentence>
+<Sentence date="20180913" id="65671_13" sentence="True" source="NULL">
+<Text>
 江苏省
 </Text>
 <Parse>
 (NR江苏省)
 </Parse>
 </Sentence>
-<Sentence date="20180913" id="65671_13" sentence="True" source="NULL">
+<Sentence date="20180913" id="65671_14" sentence="True" source="NULL">
 <Text>
 灌云县
 </Text>
@@ -4092,7 +4118,7 @@
 (NR灌云县)
 </Parse>
 </Sentence>
-<Sentence date="20180913" id="65671_14" sentence="True" source="NULL">
+<Sentence date="20180913" id="65671_15" sentence="True" source="NULL">
 <Text>
 开山岛民兵哨所所长王继才和家人坚守海岛的故事为原型进行创作
 </Text>
@@ -4119,7 +4145,7 @@
 (NP(NN创作))))))))
 </Parse>
 </Sentence>
-<Sentence date="20180913" id="65671_15" sentence="True" source="NULL">
+<Sentence date="20180913" id="65671_16" sentence="True" source="NULL">
 <Text>
 王继才
 </Text>
@@ -4127,7 +4153,7 @@
 (NR王继才)
 </Parse>
 </Sentence>
-<Sentence date="20180913" id="65671_16" sentence="True" source="NULL">
+<Sentence date="20180913" id="65671_17" sentence="True" source="NULL">
 <Text>
 于1986年接受守岛任务，与妻子在开山岛上坚守32年，把青春年华全部献给了祖国的海防事业。今年7月27日，王继才在执勤时突发疾病，经抢救无效去世，年仅58岁，他的事迹在全国范围内引起了热烈反响
 </Text>
@@ -5675,6 +5701,17 @@
 (ADVP(AD非常))
 (VP(VV值得)
 (NP(NN观赏)))))
+</Parse>
+</Sentence>
+<Sentence date="20180910" id="65678_18" sentence="True" source="NULL">
+<Text>
+（寄自加拿大）
+</Text>
+<Parse>
+(PRN(PU（)
+(VP(VV寄自)
+(NP(NR加拿大)))
+(PU）))
 </Parse>
 </Sentence>
 <Sentence date="20180908" id="65679_1" sentence="True" source="NULL">
@@ -7802,6 +7839,15 @@
 </Sentence>
 <Sentence date="20180914" id="65723_11" sentence="True" source="NULL">
 <Text>
+至13日
+</Text>
+<Parse>
+(PP(CC至)
+(NP(NT13日)))
+</Parse>
+</Sentence>
+<Sentence date="20180914" id="65723_12" sentence="True" source="NULL">
+<Text>
 全国人大常委会副委员长沈跃跃率全国人大常委会海洋环境保护法执法检查组在天津进行了检查
 </Text>
 <Parse>
@@ -7839,7 +7885,7 @@
 (NP(NN检查)))))))
 </Parse>
 </Sentence>
-<Sentence date="20180914" id="65723_12" sentence="True" source="NULL">
+<Sentence date="20180914" id="65723_13" sentence="True" source="NULL">
 <Text>
 沈跃跃强调，以习近平同志为核心的党中央高度重视海洋事业发展和海洋生态环境保护，作出了一系列决策部署，将渤海综合治理列为打好污染防治攻坚战七场标志性重大战役之一
 </Text>
@@ -7894,7 +7940,7 @@
 (NP(NN之一))))))))))
 </Parse>
 </Sentence>
-<Sentence date="20180914" id="65723_13" sentence="True" source="NULL">
+<Sentence date="20180914" id="65723_14" sentence="True" source="NULL">
 <Text>
 我们一定要依法加大渤海综合治理力度
 </Text>
@@ -7915,7 +7961,7 @@
 (NP(NN力度))))))))
 </Parse>
 </Sentence>
-<Sentence date="20180914" id="65723_14" sentence="True" source="NULL">
+<Sentence date="20180914" id="65723_15" sentence="True" source="NULL">
 <Text>
 沈跃跃说，天津地处环渤海地区的中枢部位，是京津冀城市群和环渤海城市带的交汇点，也是打好渤海综合治理攻坚战的主战场
 </Text>
@@ -7972,7 +8018,7 @@
 (NP(NN战场))))))))))
 </Parse>
 </Sentence>
-<Sentence date="20180914" id="65723_15" sentence="True" source="NULL">
+<Sentence date="20180914" id="65723_16" sentence="True" source="NULL">
 <Text>
 要以
 </Text>
@@ -7980,7 +8026,7 @@
 (NN要以)
 </Parse>
 </Sentence>
-<Sentence date="20180914" id="65723_16" sentence="True" source="NULL">
+<Sentence date="20180914" id="65723_17" sentence="True" source="NULL">
 <Text>
 实际行动坚决贯彻落实习近平生态文明思想，以法律武器治理污染，用法治力量保护生态环境；通过执法检查，进一步推动海洋环境保护法的贯彻实施；坚持问题导向，依法解决海洋环境保护突出问题
 </Text>
@@ -8038,7 +8084,7 @@
 (NP(NN问题)))))))
 </Parse>
 </Sentence>
-<Sentence date="20180914" id="65723_17" sentence="True" source="NULL">
+<Sentence date="20180914" id="65723_18" sentence="True" source="NULL">
 <Text>
 检查组先后考察了河道入海口治理、水产养殖污染防治、船舶作业污染防治、海岸修复综合整治、湿地保护等情况，并与四级人大代表、专家、相关部门和企业代表进行了座谈
 </Text>

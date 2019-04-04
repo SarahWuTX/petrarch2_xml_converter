@@ -1,3 +1,4 @@
+# coding=utf-8
 import re
 from xml.dom.minidom import Document
 from enum import Enum, unique
@@ -37,29 +38,43 @@ class PetrXmlConverter:
                     Attr.url: properties[9]
                 }
                 content = re.sub(r'\s', '', properties[8])
-                parse = self.parse(content)
-                print('parsed event {0}'.format(event[Attr.id]))
-                event[Attr.content] = self.sep_sentence(parse)
+                # parse = self.parse(content)
+                # event[Attr.content] = self.sep_sentence(parse)
+                event[Attr.content] = self.sep_sentence(content)
+                print('parse event {0}'.format(event[Attr.id]))
                 self.events.append(event)
 
     def parse(self, text):
         return ''
 
-    def sep_sentence(self, parse):
-        stack = []
+    # def sep_sentence(self, parse):
+    #     stack = []
+    #     sentences = []
+    #     for i in range(len(parse)):
+    #         if parse[i] == '(':
+    #             stack.append(i)
+    #         elif parse[i] == ')':
+    #             if len(stack) == 3 and parse[stack[-1]+1] != 'P':
+    #                 parse_sent = parse[stack[2]:i + 1]
+    #                 text_sent = re.sub(r'\([A-Z]+\s', '', parse_sent).replace(')', '')
+    #                 sentences.append({
+    #                     Attr.text: re.sub(r'\s', '', text_sent),
+    #                     Attr.parse: parse_sent.replace(' ', '')
+    #                 })
+    #             stack.pop()
+    #     return sentences
+    def sep_sentence(self, content):
         sentences = []
-        for i in range(len(parse)):
-            if parse[i] == '(':
-                stack.append(i)
-            elif parse[i] == ')':
-                if len(stack) == 3 and parse[stack[-1]+1] != 'P':
-                    parse_sent = parse[stack[2]:i + 1]
-                    text_sent = re.sub(r'\([A-Z]+\s', '', parse_sent).replace(')', '')
-                    sentences.append({
-                        Attr.text: re.sub(r'\s', '', text_sent),
-                        Attr.parse: parse_sent.replace(' ', '')
-                    })
-                stack.pop()
+        content = content.replace('\u3000', '').replace('　', '')\
+            .replace('。', '。\n')\
+            .replace('；', '，\n')\
+            .replace('。\n”', '。”\n')\
+            .strip(' \n')
+        for sent in content.split('\n'):
+            sentences.append({
+                Attr.text: sent,
+                Attr.parse: self.parse(sent)
+            })
         return sentences
 
     def generate_xml(self):
@@ -118,4 +133,3 @@ class PetrXmlConverter:
     def run(self):
         self.generate_events()
         self.generate_xml()
-
